@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="190dp"
         android:layout_height="80dp"
-        android:src="@drawable/bike"
+        android:src="@drawable/logotipo"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
 

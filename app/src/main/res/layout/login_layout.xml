@@ -36,7 +36,7 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="40dp"
-                android:background="@drawable/fundo_email"
+
                 android:drawableLeft="@drawable/ic_perm_identity"
                 android:hint="E-mail"
                 android:inputType="textEmailAddress"
@@ -52,7 +52,7 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="29dp"
                 android:layout_marginRight="40dp"
-                android:background="@drawable/fundo_email"
+
                 android:drawableLeft="@drawable/ic_lock"
                 android:hint="Senha"
                 android:inputType="textPassword"

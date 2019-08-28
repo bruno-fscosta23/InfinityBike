@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_splash"
+    tools:context=".CriarConta_Activity">
+
+
+    <RelativeLayout
+        android:id="@+id/idCriarConta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/idLogoTipoCriar"
+            android:layout_width="210dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/iconvertical" />
+
+        <TextView
+            android:id="@+id/lblCriarConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idLogoTipoCriar"
+            android:layout_centerHorizontal="true"
+            android:text="Criar sua Conta"
+            android:textColor="#000"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/idCaixaCriar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblCriarConta"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/fundo_form">
+
+            <EditText
+                android:id="@+id/txtCriarUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/fundo_email"
+                android:drawableLeft="@drawable/ic_perm_identity"
+                android:hint=" Nome de Usuário"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textColorHint="#fff"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/txtEmailCriar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCriarUsuario"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/fundo_email"
+                android:drawableLeft="@drawable/ic_email"
+                android:hint=" E - Mail"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="5dp"
+                android:textColorHint="#fff"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/txtSenhaCriar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtEmailCriar"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/fundo_email"
+                android:drawableLeft="@drawable/ic_lock"
+                android:hint=" Senha"
+                android:inputType="textWebPassword"
+                android:paddingLeft="5dp"
+                android:textColorHint="#fff"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/txtSenhaCriarRep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtSenhaCriar"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/fundo_email"
+                android:drawableLeft="@drawable/ic_lock"
+                android:hint=" Confirma Senha"
+                android:inputType="textWebPassword"
+                android:paddingLeft="5dp"
+                android:textColorHint="#fff"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnCriarConta"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/txtSenhaCriarRep"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/fundo_btnentrar"
+                android:text="Criar Conta"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="21sp"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnCriarConta"
+                android:layout_marginTop="20dp"
+                android:id="@+id/idInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/idUserName"
+                    android:hint="User Name"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

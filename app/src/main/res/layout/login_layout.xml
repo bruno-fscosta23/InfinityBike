@@ -14,11 +14,11 @@
 
         <ImageView
             android:id="@+id/idLogoTipo"
-            android:layout_width="210dp"
-            android:layout_height="110dp"
+            android:layout_width="310dp"
+            android:layout_height="140dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="70dp"
-            android:src="@drawable/logotipo" />
+            android:src="@drawable/iconvertical" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -26,8 +26,7 @@
             android:layout_below="@+id/idLogoTipo"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:layout_marginTop="30dp"
-            android:background="#05aff2">
+            android:background="@drawable/fundo_form">
 
             <EditText
                 android:id="@+id/txtEmail"
@@ -36,11 +35,11 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="40dp"
-
                 android:drawableLeft="@drawable/ic_perm_identity"
-                android:hint="E-mail"
+                android:hint=" E-mail"
                 android:inputType="textEmailAddress"
-                android:padding="11dp"
+                android:background="@drawable/fundo_email"
+                android:paddingLeft="5dp"
                 android:textColorHint="#000"
                 android:textSize="16sp" />
 
@@ -50,40 +49,39 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtEmail"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="29dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="40dp"
-
+                android:background="@drawable/fundo_email"
                 android:drawableLeft="@drawable/ic_lock"
-                android:hint="Senha"
+                android:hint=" Senha"
                 android:inputType="textPassword"
-                android:padding="11dp"
+                android:paddingLeft="5dp"
                 android:textColorHint="#000"
                 android:textSize="16sp" />
 
             <Button
                 android:id="@+id/btnEntrar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_below="@id/txtSenha"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginRight="40dp"
+                android:layout_marginBottom="30dp"
                 android:background="@drawable/fundo_btnentrar"
                 android:text="Login"
-                android:textColor="#fff"
-                android:textSize="21sp"
                 android:textAllCaps="false"
-                android:layout_marginBottom="30dp"/>
+                android:textColor="#fff"
+                android:textSize="21sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btnEntrar"
-                android:text="Criar uma Conta."
-                android:textAlignment="center"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="30dp"
-                />
+                android:text="Criar uma Conta."
+                android:textAlignment="center" />
 
 
         </RelativeLayout>

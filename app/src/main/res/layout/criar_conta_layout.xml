@@ -118,22 +118,7 @@
                 android:textColor="#fff"
                 android:textSize="21sp"
                 />
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnCriarConta"
-                android:layout_marginTop="20dp"
-                android:id="@+id/idInput"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/idUserName"
-                    android:hint="User Name"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
 
         </RelativeLayout>
 

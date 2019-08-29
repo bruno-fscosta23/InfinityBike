@@ -1,31 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fundo_splash"
+    android:orientation="vertical"
     tools:context=".FormCadastro_Activity">
 
-    <RelativeLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/idToobarForm"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/idFormCadastro"
-        android:background="@drawable/fundo_splash">
+        android:layout_height="wrap_content"
+        android:background="@drawable/fundo_toobar">
 
-        <androidx.appcompat.widget.Toolbar
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="120dp"
+            android:src="@drawable/iconhorizontal" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="85dp"
+        android:src="@drawable/ic_nome" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="70dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/fundo_toobar">
+            android:hint="Nome Sobrenome *" />
 
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="80dp"
-                android:src="@drawable/iconhorizontal"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-        </androidx.appcompat.widget.Toolbar>
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="155dp"
+        android:src="@drawable/ic_endereco" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="140dp">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Endereço *" />
 
-    </RelativeLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-</RelativeLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="210dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtNumero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numero *" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="165dp"
+        android:layout_marginTop="210dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtBairro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bairro *" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="280dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtCidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cidade *" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="280dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Estado * " />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="280dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtCEP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CEP *" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="350dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtComplemento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Complemento" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="425dp"
+        android:src="@drawable/ic_telefone" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="415dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtTelFixo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tel: Fixo" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="224dp"
+        android:layout_marginTop="415dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtTelCel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tel: Celular * " />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:background="@drawable/fundo_btnentrar"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_marginTop="530dp"
+        android:layout_marginLeft="140dp"
+        android:padding="9dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

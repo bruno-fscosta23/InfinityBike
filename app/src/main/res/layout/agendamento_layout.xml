@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Agendamento_Activity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/idToobarForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fundo_toobar">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="120dp"
+            android:src="@drawable/iconhorizontal" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agendamento"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:textSize="29sp"
+        android:textColor="#000"/>
+    <CalendarView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="130dp"
+        android:id="@+id/idCalendario">
+
+    </CalendarView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

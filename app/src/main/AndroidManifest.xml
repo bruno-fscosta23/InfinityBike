@@ -9,19 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Status_Activity"></activity>
-        <activity android:name=".MenuNavigation_Activity">
+        <activity android:name=".OrdemPedidos_Activity"></activity>
+        <activity android:name=".Status_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MenuNavigation_Activity"></activity>
         <activity android:name=".CriarConta_Activity" />
         <activity android:name=".Agendamento_Activity" />
         <activity android:name=".DadosAgendamento_Activity" />
-        <activity android:name=".FormCadastro_Activity">
-        </activity>
+        <activity android:name=".FormCadastro_Activity"></activity>
         <activity android:name=".Login_Activity" />
         <activity android:name=".MainActivity" />
     </application>

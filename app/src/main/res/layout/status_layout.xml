@@ -23,7 +23,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
             android:text="DETALHES DA MANUTENÇÃO"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#000"/>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -179,6 +180,7 @@
             android:text="Tipo: "
             android:textColor="#000"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/lblTipoBike"
             android:layout_width="wrap_content"
@@ -199,6 +201,7 @@
             android:text="Genero: "
             android:textColor="#000"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/lblGeneroBike"
             android:layout_width="wrap_content"
@@ -220,6 +223,7 @@
             android:text="Tamanho de Quadro: "
             android:textColor="#000"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/lblTamanhoBike"
             android:layout_width="wrap_content"
@@ -241,6 +245,7 @@
             android:text="Aro: "
             android:textColor="#000"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/lblAroBike"
             android:layout_width="wrap_content"
@@ -262,6 +267,7 @@
             android:text="Cor: "
             android:textColor="#000"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/lblCorBike"
             android:layout_width="wrap_content"
@@ -282,6 +288,7 @@
             android:text="Descrição da Manutenção: "
             android:textColor="#000"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/lblDescricaoBike"
             android:layout_width="wrap_content"
@@ -289,10 +296,10 @@
             android:layout_below="@+id/lblDescricao"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
             android:text="Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos."
-            android:textStyle="bold"
             android:textAlignment="gravity"
-            android:layout_marginRight="20dp"/>
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/linhastatusdois"
@@ -304,6 +311,104 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/linha_status" />
 
+        <TextView
+            android:id="@+id/lblValorObra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linhastatusdois"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Valor Mão de Obra: "
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblValorPeca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblValorObra"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Valor Peças: "
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblValoTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblValorPeca"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Valor Total: "
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblValorObraDois"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linhastatusdois"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/lblMarcaBike"
+            android:text="R$"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblValorPecaDois"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblValorObra"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lblMarcaBike"
+            android:text="R$"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblValorTotalDois"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblValorPecaDois"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lblMarcaBike"
+            android:text="R$"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblRecValorObra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linhastatusdois"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/lblValorPecaDois"
+            android:text="120,00"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblRecValorPeca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblRecValorObra"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lblValorPecaDois"
+            android:text="120,00"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblRecValorTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblRecValorPeca"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lblValorPecaDois"
+            android:text="120,00"
+            android:textStyle="bold" />
 
 
     </RelativeLayout>

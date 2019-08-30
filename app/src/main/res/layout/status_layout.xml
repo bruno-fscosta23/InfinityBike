@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_status"
+    tools:context=".Status_Activity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/idToobarForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fundo_toobar">
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/ic_btnvoltarstatus" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:text="DETALHES DA MANUTENÇÃO"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/idStatus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/idToobarForm">
+
+        <ImageView
+            android:id="@+id/imgLogoStatus"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/iconhorizontal" />
+
+        <TextView
+            android:id="@+id/lblRealizado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgLogoStatus"
+            android:layout_marginLeft="30dp"
+            android:text="Realizado em: "
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgLogoStatus"
+            android:layout_toRightOf="@+id/lblRealizado"
+            android:text="Data vem do banco" />
+
+        <RelativeLayout
+            android:id="@+id/StatusPedido"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/lblRealizado"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/fundo_relativestatus">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Status da Manutenção"
+                android:textColor="#000" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/lblOrdemServiço"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/StatusPedido"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Ordem de Serviço: "
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/StatusPedido"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/lblOrdemServiço"
+            android:text="Numero da ordem do banco" />
+
+        <ImageView
+            android:id="@+id/linhastatus"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/lblOrdemServiço"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/linha_status" />
+
+        <TextView
+            android:id="@+id/lblbike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linhastatus"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Codigo Bike: "
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblCodigoBike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linhastatus"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/lblbike"
+            android:text="Codigo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblMarca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblbike"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Marca: "
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblMarcaBike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblCodigoBike"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/lblMarca"
+            android:text="Marca"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblModelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblMarca"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Modelo: "
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblModeloBike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblMarcaBike"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lblModelo"
+            android:text="Modelo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblTipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblModelo"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Tipo: "
+            android:textColor="#000"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/lblTipoBike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblModeloBike"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lblTipo"
+            android:text="Tipo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblTipo"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Genero: "
+            android:textColor="#000"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/lblGeneroBike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblTipo"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lblGenero"
+            android:text="Genero"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblTamanho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblCodigoBike"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/lblMarcaBike"
+            android:text="Tamanho de Quadro: "
+            android:textColor="#000"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/lblTamanhoBike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblCodigoBike"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/lblTamanho"
+            android:text="15"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblAro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblTamanho"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lblMarcaBike"
+            android:text="Aro: "
+            android:textColor="#000"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/lblAroBike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblTamanho"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lblAro"
+            android:text="15"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblCor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblAro"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lblMarcaBike"
+            android:text="Cor: "
+            android:textColor="#000"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/lblCorBike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblAro"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/lblAro"
+            android:text="Amarelo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblDescricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblGenero"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Descrição da Manutenção: "
+            android:textColor="#000"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/lblDescricaoBike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblDescricao"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos."
+            android:textStyle="bold"
+            android:textAlignment="gravity"
+            android:layout_marginRight="20dp"/>
+
+
+    </RelativeLayout>
+</RelativeLayout>

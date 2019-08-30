@@ -294,6 +294,17 @@
             android:textAlignment="gravity"
             android:layout_marginRight="20dp"/>
 
+        <ImageView
+            android:id="@+id/linhastatusdois"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/lblDescricaoBike"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/linha_status" />
+
+
 
     </RelativeLayout>
 </RelativeLayout>

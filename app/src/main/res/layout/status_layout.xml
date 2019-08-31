@@ -13,11 +13,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/fundo_toobar">
 
-        <Button
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@drawable/ic_btnvoltarstatus" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

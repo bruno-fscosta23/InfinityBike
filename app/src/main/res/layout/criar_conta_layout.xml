@@ -47,6 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/fundo_email"
                 android:drawableLeft="@drawable/ic_perm_identity"
@@ -56,27 +57,12 @@
                 android:textColorHint="#fff"
                 android:textSize="16sp" />
 
-            <EditText
-                android:id="@+id/txtEmailCriar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtCriarUsuario"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginRight="40dp"
-                android:background="@drawable/fundo_email"
-                android:drawableLeft="@drawable/ic_email"
-                android:hint=" E - Mail"
-                android:inputType="textEmailAddress"
-                android:paddingLeft="5dp"
-                android:textColorHint="#fff"
-                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/txtSenhaCriar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txtEmailCriar"
+                android:layout_below="@id/txtCriarUsuario"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/fundo_email"
@@ -86,6 +72,14 @@
                 android:paddingLeft="5dp"
                 android:textColorHint="#fff"
                 android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/txtSenhaCriarRep"
@@ -116,8 +110,7 @@
                 android:text="Criar Conta"
                 android:textAllCaps="false"
                 android:textColor="#fff"
-                android:textSize="21sp"
-                />
+                android:textSize="21sp" />
 
 
         </RelativeLayout>

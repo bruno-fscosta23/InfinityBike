@@ -139,6 +139,7 @@ public class CriarConta_Activity extends AppCompatActivity {
                 JSONObject object = new JSONObject(s);
                 if (!object.getBoolean("error")){
                     Toast.makeText(getApplicationContext(),object.getString("message"),Toast.LENGTH_SHORT).show();
+                    refreshUsuarioList(object.getJSONArray("usuarios"));
                 }
             }catch (JSONException e){
                 e.printStackTrace();

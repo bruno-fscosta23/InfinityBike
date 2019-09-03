@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class RequestHandler {
 
-    public String sendPostResquest (String requestURL, HashMap<String,String> postDataParams){
+    public String sendPostRequest (String requestURL, HashMap<String,String> postDataParams){
 
         URL url;
 
@@ -55,10 +55,10 @@ public class RequestHandler {
         return sb.toString();
     }
 
-    public String sendGetRequest (String resquestURL){
+    public String sendGetRequest (String requestURL){
         StringBuilder sb = new StringBuilder();
         try{
-            URL url = new URL(resquestURL);
+            URL url = new URL(requestURL);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
 

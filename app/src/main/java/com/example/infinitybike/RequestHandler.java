@@ -28,7 +28,7 @@ public class RequestHandler {
             conn.setConnectTimeout(1500);
             conn.setRequestMethod("POST");
             conn.setDoInput(true);
-            conn.setDoInput(true);
+            conn.setDoOutput(true);
 
             OutputStream os = conn.getOutputStream();
 
@@ -41,10 +41,11 @@ public class RequestHandler {
             int responseCode = conn.getResponseCode();
 
             if (responseCode == HttpURLConnection.HTTP_OK){
+
                 BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 sb = new StringBuilder();
                 String response;
-                while ((response = br.readLine())!=null){
+                while ((response = br.readLine()) !=null){
                     sb.append(response);
                 }
             }
@@ -54,12 +55,13 @@ public class RequestHandler {
         return sb.toString();
     }
 
-    public  String sedGetRequest (String resquestURL){
+    public String sendGetRequest (String resquestURL){
         StringBuilder sb = new StringBuilder();
         try{
             URL url = new URL(resquestURL);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
+
             String s;
             while ((s = bufferedReader.readLine()) != null){
                 sb.append(s + "n");
@@ -73,7 +75,7 @@ public class RequestHandler {
     private String getPostDataString(HashMap<String,String>params) throws UnsupportedEncodingException{
         StringBuilder result = new StringBuilder();
         boolean first = true;
-        for (Map.Entry<String,String>entry : params.entrySet()){
+        for (Map.Entry<String,String> entry : params.entrySet()){
             if (first)
                 first = false;
             else

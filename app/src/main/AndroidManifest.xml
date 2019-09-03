@@ -23,7 +23,13 @@
         <activity android:name=".MenuNavigation_Activity">
 
         </activity>
-        <activity android:name=".CriarConta_Activity" />
+        <activity android:name=".CriarConta_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Agendamento_Activity">
 
         </activity>
@@ -32,11 +38,7 @@
         </activity>
         <activity android:name=".FormCadastro_Activity" />
         <activity android:name=".Login_Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
     </application>

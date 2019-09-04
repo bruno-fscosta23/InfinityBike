@@ -96,16 +96,17 @@
             android:textStyle="bold" />
 
         <RatingBar
+            android:id="@+id/idRatingbar"
+            style="?attr/ratingBarStyleIndicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:numStars="5"
-            android:stepSize="1"
             android:layout_below="@+id/idCardLinhaDois"
-            android:layout_toRightOf="@+id/lblAvaliar"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="48dp"
-            android:id="@+id/idRatingbar"
-            style="?attr/ratingBarStyleIndicator"/>
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/lblAvaliar"
+            android:numStars="5"
+            android:stepSize="1" />
+
         <ImageView
             android:id="@+id/idCardLinhaTres"
             android:layout_width="match_parent"
@@ -117,26 +118,25 @@
             android:background="@drawable/linha_status" />
 
         <Button
+            android:id="@+id/btnAvaliar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Avaliar"
-            android:textAllCaps="false"
             android:layout_below="@+id/idCardLinhaTres"
-            android:layout_marginTop="15dp"
             android:layout_marginLeft="50dp"
-            android:id="@+id/btnAvaliar"/>
+            android:layout_marginTop="15dp"
+            android:text="Avaliar"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btnStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/idCardLinhaTres"
-            android:layout_toRightOf="@+id/btnAvaliar"
             android:layout_marginLeft="70dp"
             android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/btnAvaliar"
             android:text="Detalhes"
             android:textAllCaps="false" />
-
 
 
     </RelativeLayout>

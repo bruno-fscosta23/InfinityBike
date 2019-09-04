@@ -5,15 +5,17 @@ public class ListStatus {
     private String data;
     private String avalicao;
     private String coment;
+    private int ratingbar;
 
-    public ListStatus() {
+    public ListStatus(String s, String s1, String s2) {
     }
 
-    public ListStatus(String os, String data, String avalicao, String coment) {
+    public ListStatus(String os, String data, String avalicao, String coment, int ratingbar) {
         this.os = os;
         this.data = data;
         this.avalicao = avalicao;
         this.coment = coment;
+        this.ratingbar = ratingbar;
     }
 
     public String getOs() {
@@ -32,6 +34,10 @@ public class ListStatus {
         return coment;
     }
 
+    public int getRatingbar() {
+        return ratingbar;
+    }
+
     public void setOs(String os) {
         this.os = os;
     }
@@ -46,5 +52,9 @@ public class ListStatus {
 
     public void setComent(String coment) {
         this.coment = coment;
+    }
+
+    public void setRatingbar(int ratingbar) {
+        this.ratingbar = ratingbar;
     }
 }

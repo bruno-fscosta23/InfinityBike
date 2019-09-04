@@ -3,7 +3,7 @@ package com.example.infinitybike;
 public class Api {
 
     //URL para acesso ao bando de dados WEB Service
-    private static final String ROOT_URL = "http://192.168.100.5/HeroApi/v1/Api.php?apicall=";
+    private static final String ROOT_URL = "http://10.23.49.25/HeroApi/v1/Api.php?apicall=";
 
     //Variáveis estáticas e globais para acesso os métodos no WEB Service
 
@@ -11,4 +11,9 @@ public class Api {
     public static final String URL_READ_HEROES = ROOT_URL + "getUsuario";
     public static final String URL_UPDATE_HERO = ROOT_URL + "updateheror";
     public static final String URL_DELETE_HERO = ROOT_URL + "deletehero&id=";
+
+    //Variáveis estáticas e globais para acesso os métodos no WEB Service
+
+    public static final String URL_CREATE_LOGIN = ROOT_URL + "createLogin";
+    public static final String URL_READ_LOGIN = ROOT_URL + "getLogin";
 }

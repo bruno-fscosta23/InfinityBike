@@ -1,12 +1,15 @@
 package com.example.infinitybike;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -33,9 +36,20 @@ public class RecyclerViewAdapter  extends RecyclerView.Adapter<RecyclerViewAdapt
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         holder.ordem.setText(mData.get(position).getOs());
         holder.data.setText(mData.get(position).getData());
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext,RecebeCardView_Activity.class);
+
+                intent.putExtra("ordem",mData.get(position).getOs());
+                intent.putExtra("data",mData.get(position).getData());
+                intent.putExtra("rating",mData.get(position).getRatingbar());
+            }
+        });
     }
 
     @Override
@@ -45,12 +59,16 @@ public class RecyclerViewAdapter  extends RecyclerView.Adapter<RecyclerViewAdapt
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
         TextView ordem,data;
+        CardView cardView;
+        RatingBar ratingBar;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             ordem = (TextView)itemView.findViewById(R.id.lblCardRecNumPed);
             data = (TextView)itemView.findViewById(R.id.lblCardRecDataPed);
+            cardView = (CardView)itemView.findViewById(R.id.idCardViewStatus);
+            ratingBar = (RatingBar)itemView.findViewById(R.id.idRatingbar);
 
         }
     }

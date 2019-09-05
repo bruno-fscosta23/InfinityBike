@@ -82,23 +82,7 @@ public class CriarLogin_Activity extends AppCompatActivity {
             txtSenhaCriarRep.setError("Senha  Incompatível");
             txtSenhaCriarRep.requestFocus();
         }
-        else {
-            btnCriarConta.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(CriarLogin_Activity.this);
-                    builder.setTitle("Login ")
-                            .setMessage("Login realizado com sucesso!")
-                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    Toast.makeText(getApplicationContext(),"Realize seu Agendamento",Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(getApplicationContext(), Agendamento_Activity.class));
-                                }
-                            }).setIcon(R.drawable.ic_person_pin);
-                }
-            });
-        }
+
 
         HashMap<String, String> params = new HashMap<>();
         params.put("login_usu", login_usu);

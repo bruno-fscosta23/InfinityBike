@@ -1,7 +1,10 @@
 package com.example.infinitybike;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -67,6 +70,23 @@ public class Login_Activity extends AppCompatActivity {
         }
         if (TextUtils.isEmpty(senha_usu)) {
             txtsenha.setText("Insira uma senha!");
+        }
+        else {
+            btnEntrar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Login_Activity.this);
+                    builder.setTitle("Login ")
+                            .setMessage("Login realizado com sucesso!")
+                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Toast.makeText(getApplicationContext(),"Realize seu Agendamento",Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(getApplicationContext(), Agendamento_Activity.class));
+                                }
+                            }).setIcon(R.drawable.ic_person_pin);
+                }
+            });
         }
 
         HashMap<String, String> params = new HashMap<>();

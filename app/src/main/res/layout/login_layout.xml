@@ -84,6 +84,12 @@
                 android:textAlignment="center"
                 android:id="@+id/lblCriarConta"/>
 
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/idProgLogin"/>
+
 
         </RelativeLayout>
 

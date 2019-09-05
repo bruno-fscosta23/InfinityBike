@@ -73,14 +73,16 @@ public class CriarLogin_Activity extends AppCompatActivity {
             txtCriarUsuario.setError("Por favor coloque Usuário");
             txtCriarUsuario.requestFocus();
         }
+
         if (TextUtils.isEmpty(senha_usu)) {
             txtSenhaCriar.setError("Coloque uma Senha");
             txtSenhaCriar.requestFocus();
         }
-        if (TextUtils.isEmpty(senha_usu) == (TextUtils.isEmpty(senhausurep))) {
-            txtSenhaCriarRep.setError("Senha Incompatível");
+        if (TextUtils.isEmpty(senha_usu) != (TextUtils.isEmpty(senhausurep))) {
+            txtSenhaCriarRep.setError("Senha  Incompatível");
             txtSenhaCriarRep.requestFocus();
-        } else {
+        }
+        else {
             btnCriarConta.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

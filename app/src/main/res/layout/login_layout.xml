@@ -29,7 +29,7 @@
             android:background="@drawable/fundo_form">
 
             <EditText
-                android:id="@+id/txtLogin"
+                android:id="@+id/txtLoginDois"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
@@ -47,7 +47,7 @@
                 android:id="@+id/txtSenha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtLogin"
+                android:layout_below="@+id/txtLoginDois"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="40dp"
@@ -81,7 +81,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="30dp"
                 android:text="Criar uma Conta."
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:id="@+id/lblCriarConta"/>
 
 
         </RelativeLayout>

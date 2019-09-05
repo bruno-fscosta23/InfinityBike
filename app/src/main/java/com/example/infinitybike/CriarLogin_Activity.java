@@ -21,15 +21,14 @@ import java.util.List;
 
 public class CriarLogin_Activity extends AppCompatActivity {
 
-    private static final int CODE_GET_REQUEST = 1024;
-    private static final int CODE_POST_REQUEST = 1025;
-
     EditText txtCriarUsuario,txtSenhaCriar,txtSenhaCriarRep;
     Button btnCriarConta;
     ProgressBar progressBar;
-
     List<Usuarios> usuarioList;
     boolean isUpdating = false;
+
+    private static final int CODE_GET_REQUEST = 1024;
+    private static final int CODE_POST_REQUEST = 1025;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +38,6 @@ public class CriarLogin_Activity extends AppCompatActivity {
         txtCriarUsuario = (EditText)findViewById(R.id.txtCriarUsuario);
         txtSenhaCriar = (EditText)findViewById(R.id.txtSenhaCriar);
         txtSenhaCriarRep = (EditText)findViewById(R.id.txtSenhaCriarRep);
-
         btnCriarConta = (Button)findViewById(R.id.btnCriarConta);
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
 
@@ -49,16 +47,20 @@ public class CriarLogin_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isUpdating){
-                    Toast.makeText(getApplicationContext(),"isUpdating",Toast.LENGTH_SHORT).show();
+
                 }else{
-                    createUsuario();
+                    createusuario();
+                    txtCriarUsuario.setText("");
+                    txtSenhaCriar.setText("");
+                    txtCriarUsuario.requestFocus();
                 }
             }
         });
-        readUsuario();
+        readusuario();
+
     }
 
-    private void createUsuario() {
+    private void createusuario() {
         String login_usu = txtCriarUsuario.getText().toString();
         String senha_usu = txtSenhaCriar.getText().toString();
         String senhausurep = txtSenhaCriarRep.getText().toString();
@@ -90,9 +92,8 @@ public class CriarLogin_Activity extends AppCompatActivity {
         txtSenhaCriarRep.setText("");
         txtCriarUsuario.requestFocus();
 
-        isUpdating = false;
     }
-    private void readUsuario() {
+    private void readusuario() {
         PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_READ_HEROES,null,CODE_GET_REQUEST);
         request.execute();
     }
@@ -101,6 +102,7 @@ public class CriarLogin_Activity extends AppCompatActivity {
 
         for (int i = 0; i < usuarios.length();i++){
             JSONObject obj = usuarios.getJSONObject(i);
+
             usuarioList.add(new Usuarios(
                obj.getString("login_usu"),
                obj.getString("senha_usu")
@@ -133,6 +135,7 @@ public class CriarLogin_Activity extends AppCompatActivity {
             try {
                 JSONObject object = new JSONObject(s);
                 if (!object.getBoolean("error")){
+                    Toast.makeText(getApplicationContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
                     refreshUsuarioList(object.getJSONArray("usuarios"));
                 }
             }catch (JSONException e ){

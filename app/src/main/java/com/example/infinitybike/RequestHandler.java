@@ -34,14 +34,12 @@ public class RequestHandler {
 
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
             writer.write(getPostDataString(postDataParams));
-
             writer.flush();
             writer.close();
             os.close();
+
             int responseCode = conn.getResponseCode();
-
             if (responseCode == HttpURLConnection.HTTP_OK){
-
                 BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 sb = new StringBuilder();
                 String response;

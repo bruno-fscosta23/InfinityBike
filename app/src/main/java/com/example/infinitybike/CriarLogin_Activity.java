@@ -88,14 +88,14 @@ public class CriarLogin_Activity extends AppCompatActivity {
         params.put("login_usu", login_usu);
         params.put("senha_usu", senha_usu);
 
-        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_CREATE_HERO, params, CODE_POST_REQUEST);
+        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_CREATE_LOGIN, params, CODE_POST_REQUEST);
         request.execute();
 
 
     }
 
     private void readusuario() {
-        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_READ_HEROES, null, CODE_GET_REQUEST);
+        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_READ_LOGIN, null, CODE_GET_REQUEST);
         request.execute();
 
 

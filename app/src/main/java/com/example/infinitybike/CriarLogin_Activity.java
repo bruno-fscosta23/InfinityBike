@@ -52,67 +52,51 @@ public class CriarLogin_Activity extends AppCompatActivity {
                 if (isUpdating) {
 
                 } else {
-                    createlogin();
+                    createusuario();
                     txtCriarUsuario.setText("");
                     txtSenhaCriar.setText("");
                     txtSenhaCriarRep.setText("");
                     txtCriarUsuario.requestFocus();
-
                 }
             }
         });
-        readlogin();
+        readusuario();
 
     }
 
-    private void createlogin() {
-        final String login_cli = txtCriarUsuario.getText().toString().trim();
-        final String senha_cli = txtSenhaCriar.getText().toString().trim();
-        final String senhausurep = txtSenhaCriarRep.getText().toString().trim();
+    private void createusuario() {
+        final String login_usu = txtCriarUsuario.getText().toString();
+        String senha_usu = txtSenhaCriar.getText().toString();
+        String senhausurep = txtSenhaCriarRep.getText().toString();
 
-        if (TextUtils.isEmpty(login_cli)) {
+        if (TextUtils.isEmpty(login_usu)) {
             txtCriarUsuario.setError("Por favor coloque Usuário");
             txtCriarUsuario.requestFocus();
-            return;
         }
 
-        if (TextUtils.isEmpty(senha_cli)) {
+        if (TextUtils.isEmpty(senha_usu)) {
             txtSenhaCriar.setError("Coloque uma Senha");
             txtSenhaCriar.requestFocus();
-            return;
         }
-        if (TextUtils.isEmpty(senha_cli) != (TextUtils.isEmpty(senhausurep))) {
-            txtSenhaCriarRep.setError("Digite a mesma senha!");
+        if (TextUtils.isEmpty(senha_usu) != (TextUtils.isEmpty(senhausurep))) {
+            txtSenhaCriarRep.setError("Senha  Incompatível");
             txtSenhaCriarRep.requestFocus();
-            return;
         }
-        AlertDialog.Builder builder = new AlertDialog.Builder(CriarLogin_Activity.this);
-        builder.setTitle("Usuário criado com sucesso ")
-                .setMessage("Realize o login para poder fazer o agendamento!")
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        //Toast.makeText(getApplicationContext(),"Realize seu login",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), Login_Activity.class));
-                    }
-                }).setIcon(R.drawable.ic_person_pin)
-                .show();
 
 
         HashMap<String, String> params = new HashMap<>();
-        params.put("login_cli", login_cli);
-        params.put("senha_cli", senha_cli);
+        params.put("login_usu", login_usu);
+        params.put("senha_usu", senha_usu);
 
-        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_CREATE_LOGIN, params, CODE_POST_REQUEST);
+        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_CREATE_HERO, params, CODE_POST_REQUEST);
         request.execute();
 
 
     }
 
-    private void readlogin() {
-        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_READ_LOGIN, null, CODE_GET_REQUEST);
+    private void readusuario() {
+        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_READ_HEROES, null, CODE_GET_REQUEST);
         request.execute();
-
 
 
     }
@@ -124,8 +108,8 @@ public class CriarLogin_Activity extends AppCompatActivity {
             JSONObject obj = usuarios.getJSONObject(i);
 
             usuarioList.add(new Usuarios(
-                    obj.getString("login_cli"),
-                    obj.getString("senha_cli")
+                    obj.getString("login_usu"),
+                    obj.getString("senha_usu")
             ));
         }
     }
@@ -155,7 +139,7 @@ public class CriarLogin_Activity extends AppCompatActivity {
             try {
                 JSONObject object = new JSONObject(s);
                 if (!object.getBoolean("error")) {
-                    Toast.makeText(getApplicationContext(), object.getString("Usuário criado com sucesso!"), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
                     refreshUsuarioList(object.getJSONArray("usuarios"));
                 }
             } catch (JSONException e) {

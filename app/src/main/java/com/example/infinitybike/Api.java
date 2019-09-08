@@ -18,4 +18,14 @@ public class Api {
     public static final String URL_CREATE_ACESSO = ROOT_URL + "createacesso";
     public static final String URL_READ_ACESSO = ROOT_URL + "getacesso";
 
+    //Variáveis estáticas e globais para acesso os métodos no WEB Service
+
+    public static final String URL_CREATE_CLIENTE = ROOT_URL + "createcliente";
+    public static final String URL_READ_CLIENTE = ROOT_URL + "getcliente";
+
+    //Variáveis estáticas e globais para acesso os métodos no WEB Service
+
+    public static final String URL_CREATE_ENDERECO = ROOT_URL + "createendereco";
+    public static final String URL_READ_ENDERECO = ROOT_URL + "getendereco";
+
 }

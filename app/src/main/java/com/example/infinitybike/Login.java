@@ -2,30 +2,30 @@ package com.example.infinitybike;
 
 public class Login {
 
-    private String login;
-    private String senha;
+    private String login_cli;
+    private String senha_cli;
 
     public Login() {
     }
 
-    public Login(String login, String senha) {
-        this.login = login;
-        this.senha = senha;
+    public Login(String login_cli, String senha_cli) {
+        this.login_cli = login_cli;
+        this.senha_cli = senha_cli;
     }
 
-    public String getLogin() {
-        return login;
+    public String getLogin_cli() {
+        return login_cli;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getSenha_cli() {
+        return senha_cli;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setLogin_cli(String login_cli) {
+        this.login_cli = login_cli;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setSenha_cli(String senha_cli) {
+        this.senha_cli = senha_cli;
     }
 }

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
     tools:context=".DadosAgendamento_Activity">
 
@@ -40,15 +39,26 @@
         android:text="usuario@usuario.com.br"
         android:textAlignment="center" />
 
-    <EditText
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipos de Serviços:"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:textColor="#000">
+
+    </TextView>
+
+    <Spinner
         android:id="@+id/idTipoServiçoAgenda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="170dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/fundo_email"
-        android:text="Tipo de Serviço" />
+        android:text="Tipo de Serviço"
+        android:entries="@array/tipos"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -57,7 +67,7 @@
         android:layout_marginTop="270dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/fundo_email"
-        android:text="Endeço da Bicicletaria" />
+        android:text="Av. Teotonio Vilela, 4560" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -87,13 +97,14 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <EditText
+    <Spinner
         android:id="@+id/idHoraAgenda"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="267dp"
         android:layout_marginTop="375dp"
-        android:background="@drawable/fundo_email" />
+        android:background="@drawable/fundo_email"
+        android:entries="@array/hora"/>
 
     <TextView
         android:layout_width="wrap_content"

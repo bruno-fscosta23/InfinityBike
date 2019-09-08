@@ -7,6 +7,40 @@
     android:orientation="vertical"
     tools:context=".FormCadastro_Activity">
 
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="550dp"
+        android:background="@drawable/fundo_btnentrar"
+        android:padding="9dp"
+        android:text="Cadastrar-se"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="85dp"
+        android:src="@drawable/ic_nome" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="155dp"
+        android:src="@drawable/ic_endereco" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="425dp"
+        android:src="@drawable/ic_telefone" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/idToobarForm"
         android:layout_width="match_parent"
@@ -20,13 +54,6 @@
             android:src="@drawable/iconhorizontal" />
 
     </androidx.appcompat.widget.Toolbar>
-
-    <ImageView
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="85dp"
-        android:src="@drawable/ic_nome" />
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -42,13 +69,6 @@
             android:hint="Nome Sobrenome *" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
-    <ImageView
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="155dp"
-        android:src="@drawable/ic_endereco" />
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -139,6 +159,7 @@
             android:hint="CEP *" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="330dp"
@@ -153,13 +174,6 @@
             android:hint="Complemento" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
-    <ImageView
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="425dp"
-        android:src="@drawable/ic_telefone" />
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -191,16 +205,19 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="Cadastrar-se"
-        android:background="@drawable/fundo_btnentrar"
-        android:textColor="#fff"
-        android:textSize="18sp"
-        android:layout_marginTop="530dp"
-        android:layout_marginLeft="250dp"
-        android:padding="9dp"
-        android:textAllCaps="false"/>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="480dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEditarCPF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CPF *" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

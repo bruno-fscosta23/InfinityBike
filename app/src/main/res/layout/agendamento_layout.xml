@@ -40,19 +40,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="130dp">
+        android:layout_marginTop="130dp"
+        >
 
     </CalendarView>
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="145dp"
-        android:layout_height="50dp"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
         android:layout_marginLeft="54dp"
         android:layout_marginTop="470dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtTelCel"
+            android:id="@+id/txtData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Data:" />

@@ -1,3 +1,18 @@
 <resources>
+    <array name="tipos">
+        <item>Manutenção</item>
+        <item>Revisão</item>
+    </array>
+
+    <array name="hora">
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:30</item>
+        <item>11:30</item>
+        <item>12:00</item>
+        <item>12:30</item>
+        <item>13:00</item>
+    </array>
+
     <string name="app_name">InfinityBike</string>
 </resources>

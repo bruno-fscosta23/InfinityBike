@@ -35,10 +35,10 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="40dp"
+                android:background="@drawable/fundo_email"
                 android:drawableLeft="@drawable/ic_perm_identity"
                 android:hint=" E-mail"
                 android:inputType="textEmailAddress"
-                android:background="@drawable/fundo_email"
                 android:paddingLeft="5dp"
                 android:textColorHint="#000"
                 android:textSize="16sp" />
@@ -75,20 +75,22 @@
                 android:textSize="21sp" />
 
             <TextView
+                android:id="@+id/lblCriarConta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btnEntrar"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="30dp"
                 android:text="Criar uma Conta."
-                android:textAlignment="center"
-                android:id="@+id/lblCriarConta"/>
+                android:textAlignment="center" />
 
             <ProgressBar
+                android:id="@+id/idProgLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:id="@+id/idProgLogin"/>
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
 
 
         </RelativeLayout>

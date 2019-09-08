@@ -8,17 +8,21 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class DadosAgendamento_Activity extends AppCompatActivity {
 
     Toolbar toolbar;
     Button btnFecharDadosAgenda;
+    EditText recData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dados_agendamento_layout);
 
+        recData = (EditText)findViewById(R.id.idDataAgenda);
         toolbar = (Toolbar) findViewById(R.id.idToobarDadosAgendamento);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
@@ -31,6 +35,12 @@ public class DadosAgendamento_Activity extends AppCompatActivity {
                 finish();
             }
         });
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            String value = extras.getString("data");
+            recData.setText(value);
+        }
     }
 
     @Override

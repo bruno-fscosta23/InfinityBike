@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.JsonReader;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -65,37 +67,37 @@ public class CriarLogin_Activity extends AppCompatActivity {
     }
 
     private void createusuario() {
-        final String login_usu = txtCriarUsuario.getText().toString();
-        String senha_usu = txtSenhaCriar.getText().toString();
+        String login_cli = txtCriarUsuario.getText().toString();
+        String senha_cli = txtSenhaCriar.getText().toString();
         String senhausurep = txtSenhaCriarRep.getText().toString();
 
-        if (TextUtils.isEmpty(login_usu)) {
+        if (TextUtils.isEmpty(login_cli)) {
             txtCriarUsuario.setError("Por favor coloque Usuário");
             txtCriarUsuario.requestFocus();
         }
 
-        if (TextUtils.isEmpty(senha_usu)) {
+        if (TextUtils.isEmpty(senha_cli)) {
             txtSenhaCriar.setError("Coloque uma Senha");
             txtSenhaCriar.requestFocus();
         }
-        if (TextUtils.isEmpty(senha_usu) != (TextUtils.isEmpty(senhausurep))) {
+        if (TextUtils.isEmpty(senha_cli) != (TextUtils.isEmpty(senhausurep))) {
             txtSenhaCriarRep.setError("Senha  Incompatível");
             txtSenhaCriarRep.requestFocus();
         }
 
 
         HashMap<String, String> params = new HashMap<>();
-        params.put("login_usu", login_usu);
-        params.put("senha_usu", senha_usu);
+        params.put("login_cli", login_cli);
+        params.put("senha_cli", senha_cli);
 
-        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_CREATE_ACESSO,params, CODE_POST_REQUEST);
+        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_CREATE_LOGIN,params, CODE_POST_REQUEST);
         request.execute();
 
 
     }
 
     private void readusuario() {
-        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_READ_ACESSO, null, CODE_GET_REQUEST);
+        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_READ_LOGIN, null, CODE_GET_REQUEST);
         request.execute();
 
 
@@ -108,8 +110,8 @@ public class CriarLogin_Activity extends AppCompatActivity {
             JSONObject obj = usuarios.getJSONObject(i);
 
             usuarioList.add(new Usuarios(
-                    obj.getString("login_usu"),
-                    obj.getString("senha_usu")
+                    obj.getString("login_cli"),
+                    obj.getString("senha_cli")
             ));
         }
     }

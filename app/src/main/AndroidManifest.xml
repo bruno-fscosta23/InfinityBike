@@ -14,13 +14,17 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".CriarLogin_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".PerfilUsuario_Activity"></activity>
         <activity android:name=".RecebeCardView_Activity"></activity>
         <activity android:name=".OrdemPedidos_Activity" />
         <activity android:name=".Status_Activity" >
-            
+
         </activity>
         <activity android:name=".MenuNavigation_Activity">
 
@@ -30,11 +34,7 @@
         </activity>
         <activity android:name=".DadosAgendamento_Activity"></activity>
         <activity android:name=".FormCadastro_Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Login_Activity">
 

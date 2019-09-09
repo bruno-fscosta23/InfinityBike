@@ -192,18 +192,5 @@ public class FormCadastro_Activity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_formulario,menu);
-        return super.onCreateOptionsMenu(menu);
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.idMenuForm:
-                Toast.makeText(getApplicationContext(),"Mandar para o Agendamento",Toast.LENGTH_SHORT).show();
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }

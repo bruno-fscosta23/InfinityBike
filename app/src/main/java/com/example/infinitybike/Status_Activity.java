@@ -23,12 +23,13 @@ public class Status_Activity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle("");
-        button = (Button)findViewById(R.id.btnVoltarDeta);
 
+        button = (Button)findViewById(R.id.btnVoltarDeta);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),MenuNavigation_Activity.class));
+                startActivity(new Intent(getApplicationContext(),CardViewStatus_Activity.class));
+                finish();
             }
         });
     }

@@ -1,8 +1,10 @@
 package com.example.infinitybike;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -31,8 +33,26 @@ public class DadosAgendamento_Activity extends AppCompatActivity {
         btnFecharDadosAgenda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),Agendamento_Activity.class));
-                finish();
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(DadosAgendamento_Activity.this);
+
+                builder.setTitle("Discarta Agendamento")
+                        .setMessage("Tem certeza que deseja excluir?")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                startActivity(new Intent(getApplicationContext(),Agendamento_Activity.class));
+                                finish();
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
             }
         });
 

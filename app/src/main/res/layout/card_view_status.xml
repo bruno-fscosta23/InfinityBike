@@ -1,145 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/idCardViewStatus"
-    android:layout_width="390dp"
-    android:layout_height="290dp"
-    android:layout_gravity="center_horizontal"
-    android:layout_marginTop="20dp"
-    android:orientation="vertical"
-    app:cardCornerRadius="5dp"
-    app:cardElevation="2dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/idCardLogo"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/iconhorizontal" />
 
-        <ImageView
-            android:id="@+id/idCardLinha"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/idCardViewStatus"
+        android:layout_width="390dp"
+        android:layout_height="290dp"
+        android:layout_gravity="center"
+        android:layout_margin="70dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_below="@+id/idCardLogo"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/linha_status" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/lblCardNumPed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/idCardLinha"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:text="Ordem de serviço: "
-            android:textColor="#000"
-            android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/idCardLogo"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/iconhorizontal" />
 
-        <TextView
-            android:id="@+id/lblCardRecNumPed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/idCardLinha"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_toRightOf="@+id/lblCardNumPed"
-            android:text="0001" />
+            <ImageView
+                android:id="@+id/idCardLinha"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/idCardLogo"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/linha_status" />
 
-        <TextView
-            android:id="@+id/lblCardDataPed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/lblCardRecNumPed"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:text="Realizado em: "
-            android:textColor="#000"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/lblCardNumPed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idCardLinha"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Ordem de serviço: "
+                android:textColor="#000"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/lblCardRecDataPed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/lblCardRecNumPed"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/lblCardDataPed"
-            android:text="01/02/2020" />
+            <TextView
+                android:id="@+id/lblCardRecNumPed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idCardLinha"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/lblCardNumPed"
+                android:text="0001" />
 
-        <ImageView
-            android:id="@+id/idCardLinhaDois"
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_below="@+id/lblCardRecDataPed"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/linha_status" />
+            <TextView
+                android:id="@+id/lblCardDataPed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblCardRecNumPed"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Realizado em: "
+                android:textColor="#000"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/lblAvaliar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/idCardLinhaDois"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:text="Avaliar pedido: "
-            android:textColor="#000"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/lblCardRecDataPed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblCardRecNumPed"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/lblCardDataPed"
+                android:text="01/02/2020" />
 
-        <RatingBar
-            android:id="@+id/idRatingbar"
-            style="?attr/ratingBarStyleIndicator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/idCardLinhaDois"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/lblAvaliar"
-            android:numStars="5"
-            android:stepSize="1" />
+            <ImageView
+                android:id="@+id/idCardLinhaDois"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/lblCardRecDataPed"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/linha_status" />
 
-        <ImageView
-            android:id="@+id/idCardLinhaTres"
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_below="@+id/idRatingbar"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/linha_status" />
+            <TextView
+                android:id="@+id/lblAvaliar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idCardLinhaDois"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Avaliar pedido: "
+                android:textColor="#000"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btnAvaliar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/idCardLinhaTres"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="15dp"
-            android:text="Avaliar"
-            android:textAllCaps="false" />
+            <RatingBar
+                android:id="@+id/idRatingbar"
+                style="?attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idCardLinhaDois"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/lblAvaliar"
+                android:numStars="5"
+                android:stepSize="1" />
 
-        <Button
-            android:id="@+id/btnStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/idCardLinhaTres"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="15dp"
-            android:layout_toRightOf="@+id/btnAvaliar"
-            android:text="Detalhes"
-            android:textAllCaps="false"
-            />
+            <ImageView
+                android:id="@+id/idCardLinhaTres"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/idRatingbar"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/linha_status" />
+
+            <Button
+                android:id="@+id/btnAvaliar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idCardLinhaTres"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="15dp"
+                android:text="Avaliar"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idCardLinhaTres"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/btnAvaliar"
+                android:text="Detalhes"
+                android:textAllCaps="false" />
 
 
-    </RelativeLayout>
-
-</androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

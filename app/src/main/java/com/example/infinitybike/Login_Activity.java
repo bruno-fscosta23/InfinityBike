@@ -60,15 +60,15 @@ public class Login_Activity extends AppCompatActivity {
     }
 
     private void createlogin() {
-        String login_usu = txtlogin.getText().toString();
-        String senha_usu = txtsenha.getText().toString();
+        String login_cli = txtlogin.getText().toString();
+        String senha_cli = txtsenha.getText().toString();
         progLogin = (ProgressBar) findViewById(R.id.idProgLogin);
 
-        if (TextUtils.isEmpty(login_usu)) {
+        if (TextUtils.isEmpty(login_cli)) {
             txtlogin.setText("Insira um Login!");
             txtlogin.requestFocus();
         }
-        if (TextUtils.isEmpty(senha_usu)) {
+        if (TextUtils.isEmpty(senha_cli)) {
             txtsenha.setText("Insira uma senha!");
         }
         else {
@@ -90,15 +90,15 @@ public class Login_Activity extends AppCompatActivity {
         }
 
         HashMap<String, String> params = new HashMap<>();
-        params.put("login_usu", login_usu);
-        params.put("senha_usu", senha_usu);
+        params.put("login_cli", login_cli);
+        params.put("senha_cli", senha_cli);
 
-        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_CREATE_LOGIN, params, CODE_POST_REQUEST);
+        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_CREATE_ACESSO, params, CODE_POST_REQUEST);
         request.execute();
     }
 
     private void readlogin() {
-        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_READ_LOGIN, null, CODE_GET_REQUEST);
+        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_READ_ACESSO, null, CODE_GET_REQUEST);
         request.execute();
     }
 
@@ -109,8 +109,8 @@ public class Login_Activity extends AppCompatActivity {
             JSONObject obj = login.getJSONObject(i);
 
             loginList.add(new Login(
-                    obj.getString("login_usu"),
-                    obj.getString("senha_usu")
+                    obj.getString("login_cli"),
+                    obj.getString("senha_cli")
             ));
         }
     }

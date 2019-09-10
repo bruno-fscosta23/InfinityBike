@@ -12,6 +12,8 @@ import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.net.ssl.HttpsURLConnection;
+
 public class RequestHandler {
 
     public String sendPostRequest (String requestURL, HashMap<String,String> postDataParams){
@@ -25,7 +27,7 @@ public class RequestHandler {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
             conn.setReadTimeout(15000);
-            conn.setConnectTimeout(1500);
+            conn.setConnectTimeout(15000);
             conn.setRequestMethod("POST");
             conn.setDoInput(true);
             conn.setDoOutput(true);
@@ -39,7 +41,7 @@ public class RequestHandler {
             os.close();
 
             int responseCode = conn.getResponseCode();
-            if (responseCode == HttpURLConnection.HTTP_OK){
+            if (responseCode == HttpsURLConnection.HTTP_OK){
                 BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 sb = new StringBuilder();
                 String response;
@@ -62,7 +64,7 @@ public class RequestHandler {
 
             String s;
             while ((s = bufferedReader.readLine()) != null){
-                sb.append(s + "n");
+                sb.append(s + "\n");
             }
         }catch (Exception e){
 

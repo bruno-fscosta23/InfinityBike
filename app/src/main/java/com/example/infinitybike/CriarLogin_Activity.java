@@ -3,6 +3,7 @@ package com.example.infinitybike;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -54,7 +55,7 @@ public class CriarLogin_Activity extends AppCompatActivity {
                 if (isUpdating) {
 
                 } else {
-                    createusuario();
+                    createlogin();
                     txtCriarUsuario.setText("");
                     txtSenhaCriar.setText("");
                     txtSenhaCriarRep.setText("");
@@ -62,11 +63,11 @@ public class CriarLogin_Activity extends AppCompatActivity {
                 }
             }
         });
-        readusuario();
+        readlogin();
 
     }
 
-    private void createusuario() {
+    private void createlogin() {
         String login_cli = txtCriarUsuario.getText().toString();
         String senha_cli = txtSenhaCriar.getText().toString();
         String senhausurep = txtSenhaCriarRep.getText().toString();
@@ -96,7 +97,7 @@ public class CriarLogin_Activity extends AppCompatActivity {
 
     }
 
-    private void readusuario() {
+    private void readlogin() {
         PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_READ_LOGIN, null, CODE_GET_REQUEST);
         request.execute();
 
@@ -121,6 +122,7 @@ public class CriarLogin_Activity extends AppCompatActivity {
         HashMap<String, String> params;
         int requestCode;
 
+
         PerformNetworkRequest(String url, HashMap<String, String> params, int requestCode) {
             this.url = url;
             this.params = params;
@@ -140,6 +142,7 @@ public class CriarLogin_Activity extends AppCompatActivity {
 
             try {
                 JSONObject object = new JSONObject(s);
+
                 if (!object.getBoolean("error")) {
                     Toast.makeText(getApplicationContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
                     refreshUsuarioList(object.getJSONArray("usuarios"));
@@ -152,6 +155,8 @@ public class CriarLogin_Activity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(Void... voids) {
+
+
             RequestHandler requestHandler = new RequestHandler();
 
             if (requestCode == CODE_POST_REQUEST)

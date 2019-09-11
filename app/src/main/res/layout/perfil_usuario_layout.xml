@@ -24,8 +24,8 @@
             android:layout_marginLeft="50dp"
             android:gravity="center"
             android:text="DADOS DO USUÁRIO"
-            android:textStyle="bold"
-            android:textColor="#000"/>
+            android:textColor="#000"
+            android:textStyle="bold" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -47,7 +47,8 @@
             android:id="@+id/txtEditarNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nome" />
+            android:hint="Nome"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,7 +63,8 @@
             android:id="@+id/txtEditarCPF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="CPF" />
+            android:hint="CPF"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,7 +86,8 @@
             android:id="@+id/txtEditarTelefone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Endereço" />
+            android:hint="Endereço"
+            android:maxLength="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -99,7 +102,8 @@
             android:id="@+id/txtEditarNumero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Número" />
+            android:hint="Número"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -114,7 +118,8 @@
             android:id="@+id/txtEditarBairro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Bairro" />
+            android:hint="Bairro"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,7 +134,8 @@
             android:id="@+id/txtEditarCidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Cidade" />
+            android:hint="Cidade"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -144,7 +150,8 @@
             android:id="@+id/txtEditarEstado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Estado " />
+            android:hint="Estado "
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -159,9 +166,11 @@
             android:id="@+id/txtEditarCEP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="CEP" />
+            android:hint="CEP"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="330dp"
@@ -173,7 +182,8 @@
             android:id="@+id/txtEditarComplemento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Complemento" />
+            android:hint="Complemento"
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -195,7 +205,8 @@
             android:id="@+id/txtEditarTelFixo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tel: Fixo" />
+            android:hint="Tel: Fixo"
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -210,21 +221,23 @@
             android:id="@+id/txtEditarTelCel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tel: Celular " />
+            android:hint="Tel: Celular "
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/btnEditarUsuario"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:text="Alterar"
+        android:layout_marginLeft="289dp"
+        android:layout_marginTop="550dp"
         android:background="@drawable/fundo_btnentrar"
+        android:padding="9dp"
+        android:text="Alterar"
+        android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="18sp"
-        android:layout_marginTop="550dp"
-        android:layout_marginLeft="289dp"
-        android:padding="9dp"
-        android:textAllCaps="false"
-        android:id="@+id/btnEditarUsuario"/>
+        />
 
 </RelativeLayout>

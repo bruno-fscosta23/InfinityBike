@@ -66,7 +66,8 @@
             android:id="@+id/txtNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nome Sobrenome *" />
+            android:hint="Nome Sobrenome *"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,7 +82,8 @@
             android:id="@+id/txtEndereco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Endereço *" />
+            android:hint="Endereço *"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,7 +98,8 @@
             android:id="@+id/txtNumero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Numero *" />
+            android:hint="Numero *"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -111,7 +114,8 @@
             android:id="@+id/txtBairro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Bairro *" />
+            android:hint="Bairro *"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -126,7 +130,8 @@
             android:id="@+id/txtCidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Cidade *" />
+            android:hint="Cidade *"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -141,7 +146,8 @@
             android:id="@+id/txtEstado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Estado * " />
+            android:hint="Estado * "
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -156,7 +162,8 @@
             android:id="@+id/txtCEP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="CEP *" />
+            android:hint="CEP *"
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -171,7 +178,8 @@
             android:id="@+id/txtComp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Complemento" />
+            android:hint="Complemento"
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -186,7 +194,8 @@
             android:id="@+id/txtTelFixo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tel: Fixo" />
+            android:hint="Tel: Fixo"
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -201,7 +210,8 @@
             android:id="@+id/txtTelCel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tel: Celular * " />
+            android:hint="Tel: Celular * "
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -216,7 +226,8 @@
             android:id="@+id/txtCPF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="CPF *" />
+            android:hint="CPF *"
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -231,7 +242,8 @@
             android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="E-mail *" />
+            android:hint="E-mail *"
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

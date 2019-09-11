@@ -145,7 +145,6 @@ public class CriarLogin_Activity extends AppCompatActivity {
 
             try {
                 JSONObject object = new JSONObject(s);
-
                 if (!object.getBoolean("error")) {
                     Toast.makeText(getApplicationContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
                     refreshUsuarioList(object.getJSONArray("usuarios"));
@@ -158,8 +157,6 @@ public class CriarLogin_Activity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(Void... voids) {
-
-
             RequestHandler requestHandler = new RequestHandler();
 
             if (requestCode == CODE_POST_REQUEST)

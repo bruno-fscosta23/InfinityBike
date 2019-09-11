@@ -82,7 +82,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="30dp"
                 android:text="Criar uma Conta."
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                />
 
             <ProgressBar
                 android:id="@+id/idProgLogin"

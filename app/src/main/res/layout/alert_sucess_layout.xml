@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/idAlert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btnalert"
+        android:padding="10dp"
+        >
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btnalert"
+            android:layout_below="@+id/txtAgendaSucesso"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="OK"
+            android:textColor="#05aff2"
+            android:id="@+id/btnOK">
+
+        </Button>
+
+        <ImageView
+            android:id="@+id/imgAlert"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logotipo">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAlertSucesso"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Agendamento realizado com sucesso!"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:id="@+id/txtAgendaSucesso"></TextView>
+
+        <TextView
+            android:id="@+id/txtAlertSucesso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgAlert"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Sucesso!!"
+            android:textColor="#000"
+            android:textSize="26sp"></TextView>
+
+    </RelativeLayout>
+</RelativeLayout>

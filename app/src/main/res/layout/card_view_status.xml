@@ -14,11 +14,13 @@
         android:layout_gravity="center"
         android:layout_margin="70dp"
         app:cardCornerRadius="5dp"
-        app:cardElevation="2dp">
+        app:cardElevation="4dp"
+        android:background="@drawable/fundo_cardstatus">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/fundo_cardstatus">
 
             <ImageView
                 android:id="@+id/idCardLogo"

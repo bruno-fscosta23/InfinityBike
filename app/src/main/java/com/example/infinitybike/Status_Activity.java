@@ -28,7 +28,7 @@ public class Status_Activity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),CardViewStatus_Activity.class));
+                startActivity(new Intent(getApplicationContext(),RecebeCardView_Activity.class));
                 finish();
             }
         });

@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -29,6 +30,7 @@ public class Login_Activity extends AppCompatActivity {
     EditText txtlogin, txtsenha;
     Button btnEntrar;
     ProgressBar progLogin;
+    TextView criarConta;
 
     List<Login> loginList;
 
@@ -42,22 +44,37 @@ public class Login_Activity extends AppCompatActivity {
         txtlogin = (EditText) findViewById(R.id.txtLoginDois);
         txtsenha = (EditText) findViewById(R.id.txtSenha);
         btnEntrar = (Button) findViewById(R.id.btnEntrar);
+        criarConta = (TextView)findViewById(R.id.lblCriarConta);
+        progLogin = (ProgressBar)findViewById(R.id.idProgLogin);
+
+
 
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (isUpdating) {
-
-                }
-                createlogin();
-                txtlogin.setText("");
-                txtsenha.setText("");
-                txtlogin.requestFocus();
+                startActivity(new Intent(getApplicationContext(),PerfilUsuario_Activity.class));
+                finish();
+//                if (isUpdating) {
+//
+//                }
+//                createlogin();
+//                txtlogin.setText("");
+//                txtsenha.setText("");
+//                txtlogin.requestFocus();
             }
         });
         readlogin();
+
+        criarConta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),CriarLogin_Activity.class));
+                finish();
+            }
+        });
     }
+
+
 
     private void createlogin() {
         String login_cli = txtlogin.getText().toString();
@@ -71,23 +88,23 @@ public class Login_Activity extends AppCompatActivity {
         if (TextUtils.isEmpty(senha_cli)) {
             txtsenha.setText("Insira uma senha!");
         }
-        else {
-            btnEntrar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(Login_Activity.this);
-                    builder.setTitle("Login ")
-                            .setMessage("Login realizado com sucesso!")
-                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    Toast.makeText(getApplicationContext(),"Realize seu Agendamento",Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(getApplicationContext(), Agendamento_Activity.class));
-                                }
-                            }).setIcon(R.drawable.ic_person_pin);
-                }
-            });
-        }
+//        else {
+//            btnEntrar.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    AlertDialog.Builder builder = new AlertDialog.Builder(Login_Activity.this);
+//                    builder.setTitle("Login ")
+//                            .setMessage("Login realizado com sucesso!")
+//                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+//                                @Override
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    Toast.makeText(getApplicationContext(),"Realize seu Agendamento",Toast.LENGTH_SHORT).show();
+//                                    startActivity(new Intent(getApplicationContext(), Agendamento_Activity.class));
+//                                }
+//                            }).setIcon(R.drawable.ic_person_pin);
+//                }
+//            });
+//        }
 
         HashMap<String, String> params = new HashMap<>();
         params.put("login_cli", login_cli);
@@ -161,4 +178,5 @@ public class Login_Activity extends AppCompatActivity {
             return null;
         }
     }
+
 }

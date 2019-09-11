@@ -6,16 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".MenuNavigation_Activity">
 
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idRelative">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notícias"
+                    android:textSize="30sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/txtNoticia">
+
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/idRecycleMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtNoticia">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/idBottonNanigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/colorPrimary"
-        app:itemIconTint="#000"
-        app:itemTextColor="#000"
+        android:background="@color/menu"
+        app:itemIconTint="#fff"
+        app:itemTextColor="#fff"
         app:menu="@menu/menu_navigation">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/idToobarMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fundo_toobar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="55dp"
+            android:src="@drawable/logotipo">
+
+        </ImageView>
+
+    </androidx.appcompat.widget.Toolbar>
 </FrameLayout>

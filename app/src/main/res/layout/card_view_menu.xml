@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/idCardMenu"
+            android:layout_width="390dp"
+            android:layout_height="290dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgCardMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/imgRelogioCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtNoticiaCard"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/ic_timer_cardmenu"
+                    android:text="Data"
+                    android:textSize="14sp">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/txtNoticiaCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtTituloCard"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Noticia"
+                    android:textColor="#000"
+                    android:textSize="19sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtTituloCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgCardMenu"
+                    android:layout_marginLeft="10dp"
+                    android:text="Titulo"
+                    android:textColor="#C91C1C"
+                    android:textSize="19sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtRecDataCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtNoticiaCard"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/imgRelogioCard"
+                    android:text="Data"
+                    android:textSize="14sp">
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

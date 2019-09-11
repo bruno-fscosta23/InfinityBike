@@ -30,14 +30,14 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <EditText
-        android:id="@+id/idLoginUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/fundo_email"
-        android:text="usuario@usuario.com.br"
-        android:textAlignment="center" />
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:src="@drawable/iconhorizontal"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="150dp">
+
+    </ImageView>
 
     <TextView
         android:layout_width="wrap_content"

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
@@ -60,12 +61,14 @@ public class FormCadastro_Activity extends AppCompatActivity {
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (cadastro){
-
-                }else {
-                    createcliente();
-                    createendereco();
-                }
+                startActivity(new Intent(getApplicationContext(),DadosAgendamento_Activity.class));
+                finish();
+//                if (cadastro){
+//
+//                }else {
+//                    createcliente();
+//                    createendereco();
+//                }
             }
         });
         readcliente();

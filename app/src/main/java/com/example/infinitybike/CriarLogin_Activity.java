@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.JsonReader;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -52,15 +53,17 @@ public class CriarLogin_Activity extends AppCompatActivity {
         btnCriarConta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isUpdating) {
-
-                } else {
-                    createlogin();
-                    txtCriarUsuario.setText("");
-                    txtSenhaCriar.setText("");
-                    txtSenhaCriarRep.setText("");
-                    txtCriarUsuario.requestFocus();
-                }
+                startActivity(new Intent(getApplicationContext(), Login_Activity.class));
+                finish();
+//                if (isUpdating) {
+//
+//                } else {
+//                    createlogin();
+//                    txtCriarUsuario.setText("");
+//                    txtSenhaCriar.setText("");
+//                    txtSenhaCriarRep.setText("");
+//                    txtCriarUsuario.requestFocus();
+//                }
             }
         });
         readlogin();
